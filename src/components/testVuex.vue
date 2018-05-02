@@ -1,6 +1,6 @@
 <template>
   <div>
-    这是测试vuex的简单使用示例
+    这是测试vuex的基本使用示例
     <p>price: {{price}} <button @click="incrementPrice(10)">price +10</button></p>
     <p>count: {{count}} <button @click="incrementCount(50)">count +50</button></p>
   </div>
