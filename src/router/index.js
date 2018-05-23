@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import routerNavigation from '@/components/routerNavigation'
 import routerViewName from '@/components/routerViewName'
 import routerViewName2 from '@/components/routerViewName2'
+import routerProps from '@/components/routerProps'
 
 import testNodeJS from '@/components/testNodeJS'
 
@@ -37,6 +38,13 @@ const router = new Router({
         'routerViewName': routerViewName,
         'routerViewName2': routerViewName2,
       }
+    },
+    {
+      // props实现组件和路由的解耦
+      path: '/routerProps/:prop',
+      name: 'routerProps',
+      props: true,
+      component: routerProps
     }
   ]
 })
@@ -50,6 +58,11 @@ router.beforeEach((to, from, next) => {
   if (to.name === 'HelloWorld') {
     console.log("--即将进入 HelloWorld 路由页")
     // next('/routerName')  // 进入到指定路由 == next({ path: '/routerName' })
+  }
+
+  if (to.name === 'routerProps') {
+    // 添加参数跳转
+    // next({path: '/routerProps', params: {routerProp: 'routerProp参数'}})
   }
 
   // next(false)  // 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址
