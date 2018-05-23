@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',  // assetsPublicPath默认的是  ‘/’  也就是根目录。而我们的index.html和static在同一级目录下面。  所以要改为  ‘./ ’
 
     /**
      * Source Maps

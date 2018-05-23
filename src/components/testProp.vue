@@ -1,5 +1,6 @@
 <template>
     <div>
+    ============================= testProp.vue<br>
       这是测试props属性传递-{{testProp}}
       <slot name="testSlot"></slot>
     </div>

@@ -1,5 +1,6 @@
 <template>
   <div>
+  ============================= testVuex.vue<br>
     这是测试vuex的基本使用示例
     <p>pid: {{pid}}</p>
     <!--<p>price: {{price}} <button @click="incrementPrice(10)">price +10</button></p>-->

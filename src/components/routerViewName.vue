@@ -1,5 +1,6 @@
 <template>
   <div class="routerViewName">
+    ============================= routerViewName.vue<br>
     router-view 路由视图命名
   </div>
 </template>
@@ -12,6 +13,7 @@ export default {
 
 <style>
 .routerViewName {
-  text-align:left
+  text-align:left;
+  background-color: aliceblue;
 }
 </style>

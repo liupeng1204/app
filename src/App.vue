@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+
+    <!--路由命名视图-->
     <router-view/>
-    <router-view name="routerName"/>
+    <router-view name="routerViewName"/>
+    <router-view name="routerViewName2"/>
   </div>
 </template>
 
