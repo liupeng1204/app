@@ -19,14 +19,7 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: {
-    App,
-    testProp,
-    testEmit,
-    testVuex,
-    testNodeJS,
-    tabs
-  },
+  components: {App, testProp, testEmit, testVuex, testNodeJS, tabs},
   template: `<div>
                 <App/>
                 
