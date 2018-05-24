@@ -10,6 +10,7 @@ import testEmit from './components/testEmit'
 import testVuex from './components/testVuex'
 
 import testNodeJS from './components/testNodeJS'
+import testFilters from './components/testFilters'
 import tabs from './components/tabs'
 
 Vue.config.productionTip = false
@@ -19,7 +20,7 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: {App, testProp, testEmit, testVuex, testNodeJS, tabs},
+  components: {App, testProp, testEmit, testVuex, testNodeJS, testFilters, tabs},
   template: `<div>
                 <App/>
                 
@@ -34,6 +35,8 @@ new Vue({
                 <test-vuex/>
                 
                 <testNodeJS/>
+                
+                <test-filters/>
                 
                 <tabs/>
       
