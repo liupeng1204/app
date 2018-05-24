@@ -10,6 +10,7 @@ import testEmit from './components/testEmit'
 import testVuex from './components/testVuex'
 
 import testNodeJS from './components/testNodeJS'
+import tabs from './components/tabs'
 
 Vue.config.productionTip = false
 
@@ -18,7 +19,14 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: {App, testProp, testEmit, testVuex, testNodeJS},
+  components: {
+    App,
+    testProp,
+    testEmit,
+    testVuex,
+    testNodeJS,
+    tabs
+  },
   template: `<div>
                 <App/>
                 
@@ -33,6 +41,8 @@ new Vue({
                 <test-vuex/>
                 
                 <testNodeJS/>
+                
+                <tabs/>
       
              </div>`,
   // ③组件内部的路由导航
