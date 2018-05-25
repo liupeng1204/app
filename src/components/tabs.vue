@@ -45,6 +45,7 @@
 
 <style scoped lang="scss">
 
+  /*sass语法里变量取名使用的是$ 而less语法里使用@*/
   $tab-background-color: whitesmoke;
   $tab-border-background-color: darkgray;
   $tab-active-background-color: lightgrey;
