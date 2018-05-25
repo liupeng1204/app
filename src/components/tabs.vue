@@ -43,30 +43,41 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+  $tab-background-color: whitesmoke;
+  $tab-border-background-color: darkgray;
+  $tab-active-background-color: lightgrey;
+
   .tab {
     display: inline-block;
     padding: 0 5px;
     margin-bottom: -1px;
-    border: 1px darkgray solid;
+    border: 1px $tab-border-background-color solid;
     border-radius: 3px;
     cursor: pointer;
-    background-color: whitesmoke;
+    background-color: $tab-background-color;
     color: black;
+
+    /*scss嵌套语法，类似Less*/
+    &.tab-active {
+      background-color: $tab-active-background-color;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
-  .tab.tab-active {
-    background-color: lightgrey;
-  }
 
   .tab-show {
-    border: 1px darkgray solid;
+    border: 1px $tab-border-background-color solid;
     padding: 50px;
     height: 400px;
     width:600px;
-  }
-  .tab-show div {
-    transform: rotate(3deg)
+
+    & div {
+      transform: rotate(3deg)
+    }
   }
 
 
