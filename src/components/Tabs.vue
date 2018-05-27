@@ -1,6 +1,6 @@
 <template>
   <div>
-    ============================= tabs.vue<br>
+    ============================= Tabs.vue<br>
     动态组件Tab切换
     <div class="tabs">
       <div :class="{tab: true, 'tab-active': currentTab === 'prince'}" @click="toggleTab('prince')"><a>小王子</a></div>
@@ -19,21 +19,21 @@
 </template>
 
 <script>
-  import prince from '../components/prince'
-  import rose from '../components/rose'
-  import fox from '../components/fox'
+  import Prince from './Prince'
+  import Rose from './Rose'
+  import Fox from './Fox'
 
   export default {
-    name: "tabs",
+    name: "Tabs",
     data(){
       return {
         currentTab: 'prince'
       }
     },
     components: {
-      'prince': prince,
-      'rose': rose,
-      'fox': fox
+      'prince': Prince,
+      'rose': Rose,
+      'fox': Fox
     },
     methods: {
       toggleTab: function(tabName){
@@ -44,21 +44,24 @@
 </script>
 
 <style scoped lang="scss">
-
   /*sass语法里变量取名使用的是$ 而less语法里使用@*/
   $tab-background-color: whitesmoke;
   $tab-border-background-color: darkgray;
   $tab-active-background-color: lightgrey;
 
+  /*@mixin + @include 混入样式*/
+  @mixin tab-border {
+    border: 1px $tab-border-background-color solid;
+    border-radius: 3px;
+  }
   .tab {
+    @include tab-border;
     display: inline-block;
     padding: 0 5px;
     margin-bottom: -1px;
-    border: 1px $tab-border-background-color solid;
-    border-radius: 3px;
     cursor: pointer;
-    background-color: $tab-background-color;
     color: black;
+    background-color: $tab-background-color;
 
     /*scss嵌套语法，类似Less*/
     &.tab-active {
@@ -73,7 +76,7 @@
   .tab-show {
     border: 1px $tab-border-background-color solid;
     padding: 50px;
-    height: 400px;
+    height: 450px;
     width:600px;
 
     & div {

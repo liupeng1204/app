@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import routerNavigation from '@/components/routerNavigation'
-import routerViewName from '@/components/routerViewName'
-import routerViewName2 from '@/components/routerViewName2'
-import routerProps from '@/components/routerProps'
+import RouterNavigation from '@/components/RouterNavigation'
+import RouterViewName from '@/components/RouterViewName'
+import RouterViewName2 from '@/components/RouterViewName2'
+import RouterProps from '@/components/RouterProps'
 
-import testNodeJS from '@/components/testNodeJS'
+import TestNodeJS from '@/components/TestNodeJS'
 
 Vue.use(Router)
 
@@ -20,7 +20,7 @@ const router = new Router({
     {
       path: '/routerNavigation',
       name: 'routerNavigation',
-      component: routerNavigation,
+      component: RouterNavigation,
       // ②路由器独享的路由导航
       beforeEnter: (to, from, next) => {
         console.log('路由器独享:beforeEnter')
@@ -34,9 +34,9 @@ const router = new Router({
       path: '/routerName',
       name: 'routerName',
       components: {
-        default: routerNavigation,
-        'routerViewName': routerViewName,
-        'routerViewName2': routerViewName2,
+        default: RouterNavigation,
+        'routerViewName': RouterViewName,
+        'routerViewName2': RouterViewName2,
       }
     },
     {
@@ -44,7 +44,7 @@ const router = new Router({
       path: '/routerProps/:prop',
       name: 'routerProps',
       props: true,
-      component: routerProps
+      component: RouterProps
     }
   ]
 })

@@ -1,6 +1,6 @@
 <template>
   <div class="routerNavigation">
-    ============================= routerNavigation.vue<br>
+    ============================= RouterNavigation.vue<br>
     vue-router提供的路由导航的方式:
       <p>①全局的(router.beforeEach(from,to,next)/ router.afterEach(from,to))、</p>
       <p>②单个路由独享的(beforeEnter:function(from,to,next){})、</p>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'routerNavigation'
+  name: 'RouterNavigation'
 }
 </script>
 

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <img src="../assets/rose.png">
+    <img src="../assets/image/rose.png">
     <p>小玫瑰</p>
   </div>
 </template>
 
 <script>
     export default {
-        name: "rose"
+        name: "Rose"
     }
 </script>
 

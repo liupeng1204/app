@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/image/logo.png">
 
     <!--过渡动效:CSS 动画-->
     <transition name="bounce">

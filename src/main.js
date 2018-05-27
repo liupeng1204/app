@@ -1,25 +1,48 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+
+// npm install -D bootstrap-vue, 并在入口处导入安装好的bootstrap-vue 以及两个css文件
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// 导入自定义的css文件
+import '../static/css/main.css'
+
 import App from './App'
 import router from './router'
 import store from './store'
 
-import testProp from './components/testProp'
-import testEmit from './components/testEmit'
-import testVuex from './components/testVuex'
-import testNodeJS from './components/testNodeJS'
-import testFilters from './components/testFilters'
-import tabs from './components/tabs'
+import TestProp from './components/TestProp'
+import TestEmit from './components/TestEmit'
+import TestVuex from './components/TestVuex'
+import TestNodeJS from './components/TestNodeJS'
+import TestFilters from './components/TestFilters'
+import Tabs from './components/Tabs'
+
+import TestBootstrapVue from './components/TestBootstrapVue'
 
 Vue.config.productionTip = false
+
+// use引入的BootstrapVue, 这样<b-button>等组件才可在.vue文件中使用
+Vue.use(BootstrapVue);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
-  components: {App, testProp, testEmit, testVuex, testNodeJS, testFilters, tabs},
+  components: {
+    App,
+    TestProp,
+    TestEmit,
+    TestVuex,
+    TestNodeJS,
+    TestFilters,
+    Tabs,
+    TestBootstrapVue
+  },
   template: `<div>
                 <App/>
                 
@@ -33,11 +56,13 @@ new Vue({
                 
                 <test-vuex/>
                 
-                <testNodeJS/>
+                <!--<testNodeJS/>-->
                 
                 <test-filters/>
                 
-                <tabs/>
+                <Tabs/>
+                
+                <TestBootstrapVue/>
       
              </div>`,
   // ③组件内部的路由导航

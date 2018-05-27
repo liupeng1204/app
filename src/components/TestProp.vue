@@ -1,6 +1,6 @@
 <template>
     <div>
-    ============================= testProp.vue<br>
+    ============================= TestProp.vue<br>
       这是测试props属性传递-{{testProp}}
       <slot name="testSlot"></slot>
     </div>
@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'testProp',
+    name: 'TestProp',
     props: ['testProp']
   }
 </script>

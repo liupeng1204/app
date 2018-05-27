@@ -1,6 +1,6 @@
 <template>
   <div class="routerProps">
-    ============================= routerProps.vue<br>
+    ============================= RouterProps.vue<br>
     <span>{{prop}}</span>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div>
-      ============================= testEmit.vue<br>
+      ============================= TestEmit.vue<br>
       这是测试emit事件传递
       <p>{{total}}-{{totalComputed}}</p>
       <component-b1 @custom-event="incrementTotal"/>
@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'testEmit',
+    name: 'TestEmit',
     data: () => {
         return {
           total: 0

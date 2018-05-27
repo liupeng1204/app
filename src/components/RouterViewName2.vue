@@ -1,6 +1,6 @@
 <template>
   <div class="routerViewName2">
-    ============================= routerViewName2.vue<br>
+    ============================= RouterViewName2.vue<br>
     router-view 路由视图命名2
   </div>
 </template>

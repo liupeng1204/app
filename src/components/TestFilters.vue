@@ -1,6 +1,6 @@
 <template>
   <div>
-    ============================= testFilters.vue<br>
+    ============================= TestFilters.vue<br>
     这是测试filters过滤器<br>
 
     <label for="inputFilter">输入</label>
@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: "testFilters",
+    name: "TestFilters",
     data() {
       return {
         value: ''
