@@ -1,12 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Prop from '@/components/Prop'
+import TestEmit from '@/components/TestEmit'
+import TestVuex from '@/components/TestVuex'
+import TestFilters from '@/components/TestFilters'
+import Tabs from '@/components/Tabs'
+import TestBootstrapVue from '@/components/TestBootstrapVue'
 import RouterNavigation from '@/components/RouterNavigation'
 import RouterViewName from '@/components/RouterViewName'
 import RouterViewName2 from '@/components/RouterViewName2'
 import RouterProps from '@/components/RouterProps'
 
-import TestNodeJS from '@/components/TestNodeJS'
+import TestVux from '@/components/TestVux'
 
 Vue.use(Router)
 
@@ -20,6 +26,36 @@ const router = new Router({
       path: '/helloWorld',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/testProp',
+      name: 'Prop',
+      component: Prop
+    },
+    {
+      path: '/testEmit',
+      name: 'testEmit',
+      component: TestEmit
+    },
+    {
+      path: '/testVuex',
+      name: 'testVuex',
+      component: TestVuex
+    },
+    {
+      path: '/testFilters',
+      name: 'testFilters',
+      component: TestFilters
+    },
+    {
+      path: '/tabs',
+      name: 'tabs',
+      component: Tabs
+    },
+    {
+      path: '/testBootstrapVue',
+      name: 'testBootstrapVue',
+      component: TestBootstrapVue
     },
     {
       path: '/routerNavigation',
@@ -49,6 +85,12 @@ const router = new Router({
       name: 'routerProps',
       props: true,
       component: RouterProps
+    },
+    {
+      // 测试vux组件库
+      path: '/vux',
+      name: 'vux',
+      component: TestVux
     }
   ]
 })

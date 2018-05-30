@@ -54,6 +54,10 @@
     border: 1px $tab-border-background-color solid;
     border-radius: 3px;
   }
+
+  .tabs{
+    text-align: left;
+  }
   .tab {
     @include tab-border;
     display: inline-block;

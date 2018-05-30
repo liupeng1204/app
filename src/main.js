@@ -14,15 +14,6 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-import TestProp from './components/TestProp'
-import TestEmit from './components/TestEmit'
-import TestVuex from './components/TestVuex'
-import TestNodeJS from './components/TestNodeJS'
-import TestFilters from './components/TestFilters'
-import Tabs from './components/Tabs'
-
-import TestBootstrapVue from './components/TestBootstrapVue'
-
 Vue.config.productionTip = false
 
 // use引入的BootstrapVue, 这样<b-button>等组件才可在.vue文件中使用
@@ -34,36 +25,10 @@ new Vue({
   router,
   store,
   components: {
-    App,
-    TestProp,
-    TestEmit,
-    TestVuex,
-    TestNodeJS,
-    TestFilters,
-    Tabs,
-    TestBootstrapVue
+    App
   },
   template: `<div>
                 <App/>
-                
-                <test-prop testProp="test">
-                   <span slot="testSlot">
-                      <h5>这是测试slot插槽</h5>
-                   </span>
-                </test-prop>
-                
-                <test-emit/>
-                
-                <test-vuex/>
-                
-                <!--<testNodeJS/>-->
-                
-                <test-filters/>
-                
-                <Tabs/>
-                
-                <TestBootstrapVue/>
-      
              </div>`,
   // ③组件内部的路由导航
   beforeRouteEnter: (to, from, next) => {

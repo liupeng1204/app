@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/image/logo.png">
+    <!--<img src="./assets/image/logo.png">-->
 
     <!--过渡动效:CSS 动画-->
     <transition name="bounce">
@@ -10,7 +10,6 @@
     <!--路由命名视图-->
     <router-view name="routerViewName"/>
     <router-view name="routerViewName2"/>
-
 
   </div>
 </template>
@@ -28,7 +27,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin: 20px;
   }
 
   .bounce-enter-active {

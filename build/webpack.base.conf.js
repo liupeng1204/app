@@ -4,6 +4,8 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
+const vuxLoader = require('vux-loader')
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -19,7 +21,8 @@ const createLintingRule = () => ({
   }
 })
 
-module.exports = {
+const webpackConfig = {
+// module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
@@ -94,3 +97,8 @@ module.exports = {
     child_process: 'empty'
   }
 }
+
+// 通过vux-loader添加vux插件，并暴露模块
+module.exports = vuxLoader.merge(webpackConfig, {
+  plugins: ['vux-ui']
+})
