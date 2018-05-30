@@ -13,7 +13,11 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-      path: '/',
+      path: '',
+      redirect: '/helloWorld' // 重定向到'/helloWorld'路径
+    },
+    {
+      path: '/helloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },
