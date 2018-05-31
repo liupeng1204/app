@@ -10,6 +10,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // 导入自定义的css文件
 import '../static/css/main.css'
 
+
 import App from './App'
 import router from './router'
 import store from './store'
