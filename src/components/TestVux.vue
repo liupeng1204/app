@@ -40,8 +40,8 @@
       <swipeout>
         <swipeout-item @on-close="handleEvents('on-close')"
                        @on-open="handleEvents('on-open')"
-                       sensitivity="0.4"
-                       threshold="0.5"
+                       :sensitivity="sensitivity"
+                       :threshold="threshold"
                        transition-mode="follow"
                        style="text-align: center;"
                        v-for="(person, index) in swipeout_people"
@@ -157,6 +157,9 @@
             parent: 'usa002'
           }],
         popup_picker_value2: [],
+
+        sensitivity: 0.4,
+        threshold: 0.4,
 
         swipeout_people: [
           {id: 0, name: "沁哥", star: null, top: null},

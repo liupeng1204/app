@@ -2,3 +2,12 @@
   margin: 0;
   padding: 0;
 }
+
+p {
+  margin-bottom: 0;
+}
+
+a:hover {
+  /*去除链接鼠标悬浮时下划线*/
+  text-decoration: none;
+}
